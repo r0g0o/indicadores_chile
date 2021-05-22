@@ -8,8 +8,8 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
                     level=logging.INFO)
 
 logger = logging.getLogger(__name__)
-
-
+TOKEN = '1827921985:AAFyMZYqk4bSQYlzfHbGFcaaYKz_N8kR0Bg'
+'''
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
@@ -26,8 +26,6 @@ driver.get('https://bancosantanderinversiones.finmarketslive.cl/www/mercados.htm
 
 wait = WebDriverWait(driver, 10)
 wait.until(presence_of_element_located((By.ID, "Wrapper")))
-
-TOKEN = '1827921985:AAFyMZYqk4bSQYlzfHbGFcaaYKz_N8kR0Bg'
 
 def start(update, context):
     update.message.reply_text('Se ha iniciado el reporte de indicadores cada 5 segundos.')
@@ -53,7 +51,7 @@ def start(update, context):
             update.message.reply_text(indicador.text)
         update.message.reply_text("-------------")
         time.sleep(5)
-
+'''
 '''
 def help(update, context):
     update.message.reply_text('Help!')
@@ -75,6 +73,10 @@ def echo(update, context):
     update.message.reply_text(texto5, quote=False)
 '''
 
+def start2(update, context):
+    update.message.reply_text('Hola mundo')
+
+
 def error(update, context):
     logger.warning('Update "%s" caused error "%s"', update, context.error)
 
@@ -87,7 +89,7 @@ def main():
 
     # on different commands - answer in Telegram
     
-    dp.add_handler(CommandHandler("start", start))
+    dp.add_handler(CommandHandler("start", start2))
     #dp.add_handler(CommandHandler("help", help))
     '''
     # on noncommand i.e message - echo the message on Telegram
