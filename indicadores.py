@@ -73,7 +73,7 @@ def echo(update, context):
     update.message.reply_text(texto5, quote=False)
 '''
 
-def start2(update, context):
+def prueba(update, context):
     update.message.reply_text('Hola mundo')
 
 
@@ -89,7 +89,8 @@ def main():
 
     # on different commands - answer in Telegram
     
-    dp.add_handler(CommandHandler("start", start2))
+    dp.add_handler(CommandHandler("prueba", prueba))
+    dp.add_handler(CommandHandler("start", start))
     #dp.add_handler(CommandHandler("help", help))
     '''
     # on noncommand i.e message - echo the message on Telegram
