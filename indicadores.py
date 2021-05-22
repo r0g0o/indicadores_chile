@@ -20,7 +20,7 @@ import time
 options = Options()
 options.headless = True
 
-driver = webdriver.Chrome('./chromedriver.exe', chrome_options=options)
+driver = webdriver.Chrome('chromedriver.exe', chrome_options=options)
 
 driver.get('https://bancosantanderinversiones.finmarketslive.cl/www/mercados.html')
 
