@@ -9,7 +9,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 TOKEN = '1827921985:AAFyMZYqk4bSQYlzfHbGFcaaYKz_N8kR0Bg'
-'''
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
@@ -51,7 +51,7 @@ def start(update, context):
             update.message.reply_text(indicador.text)
         update.message.reply_text("-------------")
         time.sleep(5)
-'''
+
 '''
 def help(update, context):
     update.message.reply_text('Help!')
