@@ -8,7 +8,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
                     level=logging.INFO)
 
 logger = logging.getLogger(__name__)
-TOKEN = '1827921985:AAFyMZYqk4bSQYlzfHbGFcaaYKz_N8kR0Bg'
+TOKEN = os.getenv("TOKEN")
 '''
 from selenium import webdriver
 from selenium.webdriver.common.by import By
