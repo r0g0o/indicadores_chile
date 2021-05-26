@@ -19,7 +19,7 @@ import time
 
 options = Options()
 options.headless = True
-options.add_experimental_option('excludeSwitches', ['enable-logging'])
+#options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
 driver = webdriver.Chrome('./chromedriver.exe', options=options)
 
