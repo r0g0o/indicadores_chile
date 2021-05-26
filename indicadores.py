@@ -21,7 +21,7 @@ options = Options()
 options.headless = True
 #options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
-driver = webdriver.Chrome('chromedriver.exe', options=options)
+driver = webdriver.Chrome('/chromedriver.exe', options=options)
 
 driver.get('https://bancosantanderinversiones.finmarketslive.cl/www/mercados.html')
 
