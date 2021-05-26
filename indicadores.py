@@ -9,7 +9,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 TOKEN = '1827921985:AAFyMZYqk4bSQYlzfHbGFcaaYKz_N8kR0Bg'
-
+'''
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
@@ -62,7 +62,7 @@ def start(update, context):
             update.message.reply_text(i.replace(": ", "", 1))
         update.message.reply_text("-------------")
         time.sleep(5)
-
+'''
 def prueba(update, context):
     update.message.reply_text('Hola mundo')
 
@@ -74,7 +74,7 @@ def main():
     dp = updater.dispatcher
 
     dp.add_handler(CommandHandler("prueba", prueba))
-    dp.add_handler(CommandHandler("start", start))
+    #dp.add_handler(CommandHandler("start", start))
 
     dp.add_error_handler(error)
     #updater.start_polling()
