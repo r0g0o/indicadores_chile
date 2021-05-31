@@ -20,9 +20,11 @@ import datetime
 
 options = Options()
 options.headless = True
+options.add_argument("--disable-dev-shm-usage")
+options.add_argument("--no_sandbox")
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
-
-driver = webdriver.Chrome('./chromedriver.exe', options=options)
+options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=options)
 
 driver.get('https://bancobci.finmarketslive.cl/www/index.html')
 
