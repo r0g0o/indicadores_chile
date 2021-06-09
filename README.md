@@ -1,6 +1,6 @@
-# Bienvenida-a-Telegram
-Aquí se muestra el código del bot @indicadoreschile_bot
+# Indicadores económicos chile
+Aquí se muestra el código del bot en Telegram @indicadoreschile_bot.
 
-Este bot recoge los indicadores IPSA, Cobre por libre, USD/CLP, WTI y oro desde la página:
+Este bot recoge los indicadores IPSA, Dolar/CLP, Cobre por libra y UF desde la página:
 
-https://bancosantanderinversiones.finmarketslive.cl/www/mercados.html
+https://mercadosenlinea.inversionessecurity.cl/www/resumen.html
