@@ -62,7 +62,7 @@ def scrapping(update, context):
 
 def loopeador(update, context):
     global iniciador
-    update.message.reply_text("Se ha iniciado el reporte de indicadores cada 5 segundos. Para detenerlo, escribe '/stop'")
+    update.message.reply_text("Se ha iniciado el reporte de indicadores a las 10:00. Para detenerlo, escribe '/stop'. Para solicitar un reporte al instante, escribir /muestra.")
     reloj = time.gmtime(time.time())
     while iniciador:
         if (reloj.tm_sec == 0) and (reloj.tm_min == 0) and (reloj.tm_hour == 10 - 4): #Cada día a las 10am
@@ -101,6 +101,7 @@ def main():
                           url_path=TOKEN)
     updater.bot.setWebhook('https://indicadoreschile.herokuapp.com/' + TOKEN)
     
+    #updater.start_polling()
     updater.idle()
 
 if __name__ == '__main__':
