@@ -1,1 +1,1 @@
-worker: python3 indicadores.py
+web: python indicadores.py
