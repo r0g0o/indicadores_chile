@@ -55,8 +55,9 @@ def scrapping(update, context):
 
     for i in mensaje:
         mensaje_lista.append(i + " " + mensaje[i] + "\n")
-    ahora = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-    mensaje_lista.insert(0, "Registro a las: " + ahora + "\n")
+    ahora = datetime.datetime.now() - datetime.timedelta(hours=4)
+    ahora_corregido = ahora.strftime("%d/%m/%Y %H:%M:%S")
+    mensaje_lista.insert(0, "Registro a las: " + ahora_corregido + "\n")
     update.message.reply_text("".join(mensaje_lista))
     time.sleep(5)
 '''
