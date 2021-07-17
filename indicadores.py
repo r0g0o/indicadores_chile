@@ -32,7 +32,7 @@ driver.get('https://bancobci.finmarketslive.cl/www/index.html')
 wait = WebDriverWait(driver, 10)
 wait.until(presence_of_element_located((By.XPATH, "/html/body/section/div/div[2]")))
 
-iniciador = False
+#iniciador = False
 
 def scrapping(update, context):
     mensaje = {"IPSA": "", "Dolar": "", "Cobre": "", "UF": ""}
@@ -59,7 +59,7 @@ def scrapping(update, context):
     mensaje_lista.insert(0, "Registro a las: " + ahora + "\n")
     update.message.reply_text("".join(mensaje_lista))
     time.sleep(5)
-
+'''
 def loopeador(update, context):
     global iniciador
     update.message.reply_text("Se ha iniciado el reporte de indicadores a las 10:00. Para detenerlo, escribe '/stop'. Para solicitar un reporte al instante, escribir /muestra.")
@@ -73,15 +73,15 @@ def start(update, context):
     iniciador = True
     t = threading.Thread(target=loopeador, args=(update, context))
     t.start()
-
+'''
 def prueba(update, context):
     update.message.reply_text('Hola mundo')
-
+''''''
 def stop(update, context):
     global iniciador
     iniciador = False
     update.message.reply_text("Se ha desactivado el reporte. Para volverlo a iniciar, escriba '/start'")
-
+''''''
 def error(update, context):
     logger.warning('Update "%s" caused error "%s"', update, context.error)
 
@@ -90,7 +90,7 @@ def main():
     dp = updater.dispatcher
 
     dp.add_handler(CommandHandler("prueba", prueba))
-    dp.add_handler(CommandHandler("start", start))
+    dp.add_handler(CommandHandler("start", scrapping))
     dp.add_handler(CommandHandler("stop", stop))
     dp.add_handler(CommandHandler("muestra", scrapping))
 
