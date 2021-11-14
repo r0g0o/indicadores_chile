@@ -1,1 +1,1 @@
-web: python indicadores.py
+web: python main.py
